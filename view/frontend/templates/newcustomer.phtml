@@ -1,0 +1,28 @@
+<?php
+/**
+ *
+ * @package Lillik\DisableRegistration
+ *
+ */
+
+/** @var \Lillik\DisableRegistration\Block\Form\Login\Info $block */
+
+/** @var \Lillik\DisableRegistration\ViewModel\Form\Login\Info $infoViewModel */
+$infoViewModel = $block->getInfoViewModel();
+
+?>
+<?php if (!$block->canRegister() && $block->canShowInfoBlock()) : ?>
+    <div class="block block-new-customer">
+        <div class="block-title">
+            <strong id="block-new-customer-heading" role="heading" aria-level="2"><?= $block->escapeHtml(__('New Customers')) ?></strong>
+        </div>
+        <div class="block-content" aria-labelledby="block-new-customer-heading">
+            <p><?= $block->escapeHtml(__('The registration is disabled. To create an account, please contact us.')) ?></p>
+            <div class="actions-toolbar">
+                <div class="primary">
+                    <a href="<?= $block->escapeUrl($infoViewModel->getContactUsUrl()) ?>" class="action create primary"><span><?= $block->escapeHtml(__('Contact Us')) ?></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php endif; ?>

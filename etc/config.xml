@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customer>
+            <create_account>
+                <customer_registration_enable>1</customer_registration_enable>
+                <can_show_info_block>1</can_show_info_block>
+            </create_account>
+        </customer>
+    </default>
+</config>
