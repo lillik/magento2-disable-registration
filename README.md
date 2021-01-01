@@ -17,7 +17,7 @@ The extension allow you to replace in the store the customer **Register** button
 ### Installation
 The preferred way of installing **lillik/module-disable-registration** is through Composer. Simply add **lillik/module-disable-registration** as a dependency:
 ```bash
-composer require lillik/magento2-disable-registration
+composer require lillik/module-disable-registration
 ```
 Install and Enable Module:
 ```bash
